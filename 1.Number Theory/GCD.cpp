@@ -1,8 +1,8 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-//Naive Solution O(min(a,b))
-
+// NAIVE SOLUTION
 int gcd(int a, int b)
 {
     int res = min(a, b);
@@ -15,8 +15,8 @@ int gcd(int a, int b)
     return res;
 }
 
-//Euclidean Algorithm
-int gcdE(int a, int b)
+// EUCLIDEAN ALGORITHM
+int gcdEuclid(int a, int b)
 {
     while (a != b)
     {
@@ -28,23 +28,21 @@ int gcdE(int a, int b)
     return a;
 }
 
-//Optimized Euclidean Algorithm (Recursive)
-int gcdO(int a, int b)
+//OPTIMISED EUCLIDEAN ALGORITHM
+int gcdEuclidOptimized(int a, int b)
 {
-    if(b == 0)
-    return a;
+    if (b == 0)
+        return a;
     else
-    return gcdO(b, a%b);
+        return gcdEuclidOptimized(b, a % b);
 }
 
 int main()
 {
     int a, b;
-    cout << "Enter two numbers" << endl;
     cin >> a >> b;
-    cout << "Greatest Common Divisor is (Naive): " << gcd(a, b) << endl;
-    cout << "Greatest Common Divisor is (Euclidean Algorithm): " << gcdE(a, b) << endl;
-    cout << "Greatest Common Divisor is (Optimized Euclidean Algorithm): " << gcdO(a, b) << endl;
-
+    cout << gcd(a, b) << endl;
+    cout << gcdEuclid(a, b) << endl;
+    cout << gcdEuclidOptimized(a, b) << endl;
     return 0;
 }

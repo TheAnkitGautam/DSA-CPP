@@ -1,28 +1,32 @@
 #include <iostream>
 using namespace std;
-int factorial(int n)
+
+// Iterative Solution
+int fact_Iter(int n)
 {
-    int fact = 1;
-    for (int i = n; i > 0; i--)
+    int res = 1;
+    for (int i = 2; i <= n; i++)
     {
-        fact = fact * i;
+        res = res * i;
     }
-    return fact;
+    return res;
 }
-int recurFac(int n)
+
+// Recursive Solution
+int fact_Recur(int n)
 {
     if (n == 0)
     {
         return 1;
     }
-    return n * recurFac(n - 1);
+    return n * fact_Recur(n - 1);
 }
+
 int main()
 {
     int n;
-    cout << "Enter Number" << endl;
     cin >> n;
-    cout << "With loop: " << factorial(n) << endl;
-    cout << "With Recursion: " << recurFac(n) << endl;
+    cout << fact_Iter(n) << endl;
+    cout << fact_Recur(n) << endl;
     return 0;
 }
