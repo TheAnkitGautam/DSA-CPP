@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-//Binary Expontiation
+//Binary Exponetiation
 int power(int x, int n)
 {
     int res = 1;
@@ -14,7 +14,8 @@ int power(int x, int n)
     }
     return res;
 }
-//Binary Expontiation Optimized
+
+//Binary Exponetiation Optimized
 int powerOp(int x, int n)
 {
     int res = 1;
