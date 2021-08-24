@@ -27,7 +27,7 @@ int countSetBits2(int n)
 
 // LOOKUP TABLE METHOD
 int table[256];
-void initialize()
+void  initialize()
 {
     table[0] = 0;
     for (int i = 1; i < 256; i++)
@@ -48,6 +48,7 @@ int countSetBits3(int n)
 }
 int main()
 {
+    initialize(); 
     int n;
     cin >> n;
     cout << countSetBits(n) << endl;
