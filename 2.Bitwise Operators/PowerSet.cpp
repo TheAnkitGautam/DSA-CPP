@@ -14,12 +14,9 @@ int main()
         for (int j = 0; j < n; j++)
         {
             if ((i & (1 << j)) != 0)
-            {
                 cout << str[j];
-            }
         }
-        cout << "\n";
+        cout << " ";
     }
-
     return 0;
 }
