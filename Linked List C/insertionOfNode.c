@@ -26,7 +26,6 @@ struct Node *insertAtFirst(struct Node *head, int data)
 {
     struct Node *ptr = (struct Node *)malloc(sizeof(struct Node));
     ptr->data = data;
-
     ptr->next = head;
     return ptr;
 }
