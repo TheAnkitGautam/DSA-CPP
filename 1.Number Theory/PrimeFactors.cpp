@@ -79,6 +79,7 @@ void primeFactorsMoreEff(int n)
     if (n > 3)
         cout << n;
 }
+
 int main()
 {
     int n;

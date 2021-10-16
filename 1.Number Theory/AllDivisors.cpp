@@ -13,6 +13,7 @@ void allDivisors(int n)
         }
     }
 }
+
 //EFFICIENT SOLUTION
 void allDivisorsEfficient(int n)
 {
@@ -33,14 +34,13 @@ void allDivisorsEfficient(int n)
 void allDivisorsMoreEfficient(int n)
 {
     int i;
-    for (int i = 1; i * i < n; i++)
+    for (i = 1; i * i < n; i++)
     {
         if (n % i == 0)
         {
             cout << i << " ";
         }
     }
-    // cout << "*" << i << "*" << endl;
     for (i = sqrt(n); i >= 1; i--)
     {
         if (n % i == 0)

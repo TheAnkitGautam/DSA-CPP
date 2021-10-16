@@ -10,7 +10,8 @@ bool isPalindrome(int num)
         rev = rev * 10 + num % 10;
         num = num / 10;
     }
-    return (temp == rev);}
+    return (temp == rev);
+}
 
 int main()
 {

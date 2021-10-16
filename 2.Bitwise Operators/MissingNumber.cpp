@@ -4,8 +4,6 @@ using namespace std;
 int findMissing(int arr[], int n)
 {
     int x1 = arr[0];
-
-    // For xor of all the elements from 1 to n+1
     int x2 = 1;
 
     for (int i = 0; i < n; i++)
