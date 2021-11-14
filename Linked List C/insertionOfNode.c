@@ -85,32 +85,32 @@ int main()
 
     // Allocate memory for nodes in the linked list in Heap
     head = (struct Node *)malloc(sizeof(struct Node));
-    second = (struct Node *)malloc(sizeof(struct Node));
-    third = (struct Node *)malloc(sizeof(struct Node));
-    fourth = (struct Node *)malloc(sizeof(struct Node));
+    // second = (struct Node *)malloc(sizeof(struct Node));
+    // third = (struct Node *)malloc(sizeof(struct Node));
+    // fourth = (struct Node *)malloc(sizeof(struct Node));
 
     // Link first and second nodes
-    head->data = 7;
-    head->next = second;
+    // head->data = 7;
+    // head->next = second;
 
-    // Link second and third nodes
-    second->data = 11;
-    second->next = third;
+    // // Link second and third nodes
+    // second->data = 11;
+    // second->next = third;
 
-    // Link third and fourth nodes
-    third->data = 41;
-    third->next = fourth;
+    // // Link third and fourth nodes
+    // third->data = 41;
+    // third->next = fourth;
 
-    // Terminate the list at the third node
-    fourth->data = 66;
-    fourth->next = NULL;
+    // // Terminate the list at the third node
+    // fourth->data = 66;
+    // fourth->next = NULL;
 
     printf("Linked list before insertion\n");
-    linkedListTraversal(head);
-    // head = insertAtFirst(head, 56);
+    // linkedListTraversal(head);
+    head = insertAtFirst(head, 56);
     // head = insertAtIndex(head, 56, 1);
     // head = insertAtEnd(head, 56);
-    head = insertAfterNode(head, third, 45);
+    // head = insertAfterNode(head, third, 45);
     printf("\nLinked list after insertion\n");
     linkedListTraversal(head);
 
