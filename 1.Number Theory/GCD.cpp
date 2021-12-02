@@ -35,6 +35,8 @@ int gcdEuclidOptimized(int a, int b)
         return a;
     else
         return gcdEuclidOptimized(b, a % b);
+    
+    // return b ? gcd (b, a % b) : a;  ONE LINER
 }
 
 int main()
