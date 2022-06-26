@@ -32,16 +32,17 @@ void printLevel(Node *root)
         {
             cout << "\n";
             q.push(NULL);
-            continue;
         }
+        else
+        {
+            cout << curr->key << " ";
 
-        cout << curr->key << " ";
+            if (curr->left != NULL)
+                q.push(curr->left);
 
-        if (curr->left != NULL)
-            q.push(curr->left);
-
-        if (curr->right != NULL)
-            q.push(curr->right);
+            if (curr->right != NULL)
+                q.push(curr->right);
+        }
     }
 }
 int main()
